@@ -1,0 +1,131 @@
+/*Adding Roboto font here*/
+@import url("https://fonts.googleapis.com/css?family=Lato:wght@400;700&display=swap");
+
+/* Setting box-sizing to border-box so if we add padding or border to an element it won't bother its width */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+
+  overflow-x: hidden;
+
+  background-color: #333;
+
+  color: #222;
+
+  margin: 0;
+}
+
+.elder-container {
+  width: 100vw;
+}
+
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: 0.5s linear;
+  width: 70vw;
+  min-height: 100vh;
+  padding: 50px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+/* --------------Applying some styles to the content ---------------*/
+.content h1 {
+  text-align: center;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  columns: #333;
+  line-height: 1.5;
+}
+
+/* Adding transform, and style to the nav, circle-container and circle */
+
+.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(40, 40, 218, 0.664);
+  border-radius: 50%;
+  position: relative;
+  /* to make it rotate, we'll have to add transition */
+  transform: transform 0.5s linear;
+}
+/* now adding up buttons in the cricle */
+.circle button {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  height: 50px;
+  font-size: 26px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.circle button#open {
+}
+
+.circle button#close {
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+/* ----------now styling nav---------- */
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fff;
+  margin: 40px 0;
+  /* transform: translateX(-100%); */
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+}
+
+nav ul li + li + li {
+  margin-left: 15px;
+}
+
+nav ul li + li + li + li {
+  margin-left: 15px;
+}
